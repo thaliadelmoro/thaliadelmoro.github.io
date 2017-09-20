@@ -1,0 +1,132 @@
+html
+{
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+body
+{
+	background-color: #d5d5d5;
+	max-width: 100%
+	min-width: 32%;
+	overflow-x: hidden;
+}
+
+.bgimage
+{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('images/image1.jpeg');
+}
+
+.navbar
+{
+	width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+.logo {
+    float: left;
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #fff;
+	color: #111;
+	
+    transition:all 1s ease;
+}
+
+.container
+{
+	margin-top: 60rem;
+	background-color: #fff;
+	min-width: 100%;
+	min-height: 67rem;
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+}
+
+.container2
+{
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+	background-color: #d8bfd8;
+	min-width: 100%; 
+	height: 67rem;
+	margin-top: -2rem;
+}
+
+.container3
+{
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+	background-color: #4682b4;
+	min-width: 100%; 
+	height: 67rem;
+	margin-top: -2rem;
+}
+
+.footer
+{
+	padding-top: 3.5rem;
+	background-color: #111;
+	color: white;
+	min-width: 100%; 
+	height: 27rem;
+	margin-top: -2rem;
+}
+
+
+.col1
+{
+	height: auto;
+	padding-left: 5%;
+	padding-right: 2rem;
+}
+
+
+.col2
+{
+	height: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+
+.image-cropper {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+	display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.portrait {
+    display: inline;
+    margin: 0 auto;
+    height: 50%;
+    width: auto;
+}
