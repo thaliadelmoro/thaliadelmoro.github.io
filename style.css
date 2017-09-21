@@ -20,12 +20,6 @@ body
 	background-image: url('images/image1.jpeg');
 }
 
-.smallnavbar, .smallnavbar > .logo, .smallnavbar > ul, .smallnavbar > li
-	  {
-		  display: none;
-		  visibility:hidden;
-	  }
-
 .navbar
 {
 	width: 100%;
@@ -88,7 +82,7 @@ li a:hover {
 	padding-bottom: 3.5rem;
 	background-color: #d8bfd8;
 	min-width: 100%; 
-	height: 67rem;
+	height: auto;
 	margin-top: -2rem;
 }
 
@@ -141,11 +135,31 @@ li a:hover {
     margin-right:auto;
 }
 
+.portfolioimg
+{
+	padding-left: 1rem;
+	padding-top: 1.8rem;
+	width: 300px;
+	height: 200px;
+	overflow:hidden;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.portfolioimg:hover
+{
+	filter: none;
+    -webkit-filter: grayscale(0%);
+	-webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
 @media (max-width:767px) {
       .border
       {
         border:0px solid !important;
       }
-	  
-	  
 }
