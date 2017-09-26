@@ -81,9 +81,11 @@ li a:hover {
 	padding-top: 3.5rem;
 	padding-bottom: 3.5rem;
 	background-color: #d8bfd8;
-	min-width: 100%; 
 	height: auto;
+	min-width: 100%; 
 	margin-top: -2rem;
+	padding-left: 15rem;
+	padding-right: 15rem;
 }
 
 .container3
@@ -94,6 +96,8 @@ li a:hover {
 	min-width: 100%; 
 	height: 67rem;
 	margin-top: -2rem;
+	padding-left: 15rem;
+	padding-right: 15rem;
 }
 
 .footer
@@ -157,9 +161,159 @@ li a:hover {
     transition: all 0.6s ease-out;
 }
 
-@media (max-width:767px) {
+.myinput{
+    width: 50%;
+	padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: 2px solid #d5d5d5;
+    border-radius: 4px;
+}
+
+.input-group
+{
+	margin-bottom: 1rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	  background-color: #4682b4;
+	  cursor: pointer;
+	  display: inline-block;
+	  padding: 0 .5em;
+	  font-size: .9em;
+	  line-height: 2;
+	  border: 1px solid #ddd;
+	  border-radius: .25em;
+}
+
+.container3> form > fieldset > div > .inputmsg{
+    height: 18rem;
+}
+
+input:focus {
+	  border: 2px solid #555;
+}
+
+@media (max-width:600px) {
       .border
       {
         border:0px solid !important;
       }
+	 .container3
+	 {
+		 padding-left: 5rem;
+		 padding-right: 5rem;
+	 }
+	 .container3 > form
+	  {
+		  border: 1px solid red;
+		  width: 100%;
+		  overflow: hidden;
+	  }
+	  	  
+}
+
+
+.read-more-wrap > li
+{
+	list-style: none;
+}
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+	}
+
+	.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
 }
