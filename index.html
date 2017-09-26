@@ -26,7 +26,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Thalia Delmoro</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -43,10 +43,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+      
     </div>
   </div>
 </nav>
@@ -92,19 +89,75 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div id="portfolio" class="container2 w3-center w3-container">
 	<h3>Portfolio </h3><br>
 		Empty because im not creative enough<br>
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
-		<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
 		
+		<div>
+		  <input type="checkbox" class="read-more-state" id="post-1" />
+
+		  <p class="read-more-wrap">
+			  <img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+			  <img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+			  <img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+			  <span class="read-more-target">
+					<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+					<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+					<img class="portfolioimg" src="http://lorempixel.com/300/200/" />
+					
+			  </span>
+		  </p>
+		  
+		  <label for="post-1" class="read-more-trigger"></label>
+		</div>
+				
 </div>
 
 <div id="contact" class="container3 w3-center ">
 	<h3>Send me a message </h3><br>
+	
+	<!-- action="https://script.google.com/macros/s/AKfycbxAtwB4XtHnjl9WfVhcrbLXbd5jEi3RcAngE10aqXGUkwm9TAk/exec" -->
+	<form id="gform" method="POST" onsubmit="return myModal(this)" action="https://script.google.com/macros/s/AKfycbxAtwB4XtHnjl9WfVhcrbLXbd5jEi3RcAngE10aqXGUkwm9TAk/exec">
+	  <fieldset>
+	  
+		<div class="input-group">
+		  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+		  <input type="text" class="form-control" placeholder="Name" name="name">
+		</div>
+		
+		<div class="input-group">
+		  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+		  <input type="text" class="form-control" placeholder="Email" name="email"
+		  required
+                data-fv-notempty-message="Email is required" />
+		</div>
+		
+		<div class="input-group">
+		  <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+		  <input type="text" class="form-control inputmsg" placeholder="Message" name="message">
+		</div>
+		
+		<!-- Message:<br><br>
+		<input class="inputmsg" type="text" name="message"><br><br>
+		Email:<br><br>
+		<input type="text" name="email"><br><br> -->
+		<input id="myBtn" type="submit" value="Submit">
+	  </fieldset>
+	</form>
+		
+		<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	  <div class="modal-header">
+		<span class="close">&times;</span>
+		<h2>Sent!</h2>
+	  </div>
+	  <div class="modal-body">
+		<p>Thank you for leaving me a message</p>
+		<p>I will get back to you soon!</p>
+	  </div>
+	</div>
+
+	</div>
 		
 </div>
 
@@ -114,6 +167,33 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 
 <script>
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 function checkScroll(){
     var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
 
@@ -155,6 +235,16 @@ $(document).ready(function(){
   });
 });
 </script>
+<script>
+$(document).ready(function() {
+    $('#gform').formValidation();
+});
+</script>
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js">
 
+</script>
 </body>
+
+
 </html>
