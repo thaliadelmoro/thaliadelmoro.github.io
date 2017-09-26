@@ -84,8 +84,6 @@ li a:hover {
 	height: auto;
 	min-width: 100%; 
 	margin-top: -2rem;
-	padding-left: 15rem;
-	padding-right: 15rem;
 }
 
 .container3
@@ -206,7 +204,6 @@ input:focus {
 	 }
 	 .container3 > form
 	  {
-		  border: 1px solid red;
 		  width: 100%;
 		  overflow: hidden;
 	  }
